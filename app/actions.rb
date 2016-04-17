@@ -9,6 +9,10 @@ get '/messages' do
 end
 
 get '/messages/new' do
+  erb :'messages/new'
+end
+
+post '/messages/new' do
   @message = Message.new(
     title: params[:content],
     content: params[:content],
